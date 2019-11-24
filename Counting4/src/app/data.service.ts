@@ -123,11 +123,11 @@ export class DataService {
 
 
     }
-    return this.checkPathColumn(row, column, token);
+    return this.checkPathLTR(row, column, token);
 
   }
 
-  checkPathColumn(row: number, column: number, token: string) {
+  checkPathLTR(row: number, column: number, token: string) {
     let counter: number = 0;
     let j = column;
     for (let i = row; (i < 6) && (j < 7) && (i >= 0) && (j >= 0); i++) {
@@ -144,25 +144,7 @@ export class DataService {
     }
     return false;
   }
-  checkPathRow(row: number, column: number, token: string) {
-    let counter: number = 0;
-    let j = row;
-    for (let i = column; (i < 7) && (j < 6) && (i >= 0) && (j >= 0); i++) {
-      if (this.playBoard[i].arr[j] == token) {
-        counter++;
-        if (counter == 4)
-          return true;
-
-
-
-      }
-      else
-        counter = 0;
-
-      j++;
-    }
-    return false;
-  }
+ 
 
   checkRTLDiagonal(column: number, row: number, token: string) {
     column += 3
