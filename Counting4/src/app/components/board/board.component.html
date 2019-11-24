@@ -1,0 +1,65 @@
+<div class="alert alert-success" *ngIf="win">
+        <div *ngIf=" player1">
+            Win for player one!
+        </div>
+        
+        <div *ngIf="!player1">
+            Win For Player Two
+        </div>
+        
+    </div>
+            <div class="alert alert-danger" *ngIf="full">
+                This column is full, try somewhere else!
+            </div>
+    <div class="turn">
+        
+            <h2 *ngIf="player1" class="p1">It Is Player One Turn</h2>
+        
+        <h2 *ngIf="!player1" class="p2">It Is Player Two Turn </h2>
+    </div>
+<div class="board">
+        <h1 class="title"> COUNTING FOUR!</h1>
+<div  *ngFor="let p of playBoard; let i=index" style="float: left;">
+    <div >
+        <button   (click)="onMove(i)">
+        <div  *ngFor="let c of p.arr">
+
+
+                <div *ngIf="c==null"> 
+                        <div id="list"  style="background-color:white;">
+                
+                                
+                                
+                                
+                                
+                        </div>
+                        </div>
+                        
+          
+            <div *ngIf="c=='+'"> 
+                    <div id="list"   style="background-color: red;">
+            
+                            
+                            
+                            
+                            
+                    </div>
+                    </div>
+                    
+                    <div *ngIf="c=='-'"> 
+                            <div id="list"  class="list-group-item" style="background-color:yellow;">
+                    
+                                    
+                                    
+                                    
+                                    
+                            </div>
+                            </div>
+                        <br>    
+                        </div>
+            </button>
+    
+        </div>
+    </div>
+</div>
+

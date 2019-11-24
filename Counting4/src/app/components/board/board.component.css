@@ -1,0 +1,41 @@
+app-column:hover{
+    background-color: rgb(174, 213, 248);
+}
+button{
+    padding: .3;
+    border: 0ch;
+    background-color:rgb(73, 57, 219);
+}
+button:hover{
+    background-color: rgb(157, 213, 245);
+}
+#list{
+border-radius: 100%;
+width: 50px;
+height: 50px;
+}
+
+.board{
+    margin-left:35%;
+   
+    
+}
+.turn{
+
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    margin-top:10px;
+    margin-left:10px ;
+}
+.p1{
+    color: red;
+}
+.p2{
+    color: rgb(226, 223, 12);
+   
+}
+.title{
+margin-left: 40px;
+    color:rgb(221, 36, 36);
+    
+    text-shadow: 5px 5px 4px rgb(236, 177, 12);
+}
