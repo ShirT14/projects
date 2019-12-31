@@ -12,7 +12,10 @@ import javax.persistence.UniqueConstraint;
 
 import org.hibernate.validator.constraints.UniqueElements;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 
 public class Item {
 	public Item(String name, int amount, @UniqueElements int inventory_code) {
