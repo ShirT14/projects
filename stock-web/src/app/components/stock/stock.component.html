@@ -1,0 +1,29 @@
+<div>
+<h1> Welcome to stock view</h1>
+<div *ngIf="stockItems" >
+    <div class="col-sm-8">
+        <table class="table table-bordered"   >
+            
+                <tr>
+                    <th scope="col" >Item No</th>
+                    <th scope="col" >Name</th>
+                    <th scope="col" >Amount</th>
+                    <th scope="col">Inventory Code </th>
+                    <th scope="col" >  </th>
+                </tr>
+            
+           
+                <tr  *ngFor="let i of stockItems">
+                    <td> {{i.item_no}}</td>
+                    <td><a routerLink="/item/{{i.item_no}}"> {{i.name}}</a></td>
+                    <td >{{i.amount}}</td>
+                    <td >{{i.inventory_code}}</td>
+                    <td><button type="button" class="btn btn-danger" (click)="deleteItem(i.item_no)"> Delete Item</button></td>
+                </tr>
+           
+        </table>
+    </div>
+<br>
+<a class="btn btn-primary" routerLink="/item/0">Add Item </a>
+</div>
+</div>
